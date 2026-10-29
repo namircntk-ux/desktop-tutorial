@@ -1,34 +1,64 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portal Berita IT</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <header>
-    <h1>Universitas Yudharta Pasuruan</h1>
-    <nav>
-        <ul>
-            <li><a href="home" target="_blank">Beranda</a></li>
-            <li><a href="berita">Berita</a></li>
-        </ul>
-    </nav>
+    <div class="header-inner">
+        <h1>Universitas Yudharta Pasuruan</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Beranda</a></li>
+                <li><a href="#">Berita</a></li>
+            </ul>
+        </nav>
+    </div>
 </header>
 <main>
-    <article>
+    <section class="pembuka" id="beranda">
         <h2>Selamat Datang di Portal Berita IT</h2>
         <p>Temukan berita terbaru seputar teknologi informasi dan inovasi digital di sini.</p>
-    </article>
-    <section>
-        <h2>Berita Terkini</h2>
-        <article>
-            <h3>Tata cara memasak nasi</h3>
-            <ol>
-                <li>pilih beras</li>
-                <li>cuci beras</li>
-                <li>masak beras</li>
-            </ol>
+    </section>
+    <section id="berita">
+        <h2 class="grid-bagian">Berita Terkini</h2>
+        <div class="grid-bagian">
+            <!--Berita 1-->
+            <article class="kartu-berita">
+                <span class="kategori">Pemrograman</span>
+                <h3>Belajar HTML untuk pemula</h3>
+                <p>Pelajari dasar-dasar HTML dan cara membuat halaman web sederhana.</p>
+                <a href="#beranda" class="tombol">Baca Selengkapnya</a>
+            </article> 
+            <!--Berita 2-->
+            <article class="kartu-berita">
+                <span class="kategori">Teknologi</span>
+                <h3>Pengertian CSS </h3>
+                <p>CSS berfungsi untuk mengatur warna,ukuran teks,jarak, dan tampilan website agar lebih menarik.</p>
+                <a href="#beranda" class="tombol">Baca Selengkapnya</a>
+            </article>
+            <!--Berita 3-->
+            <article class="kartu-berita">
+                <span class="kategori">Web Design</span>
+                <h3>Belajar Responsive Grid</h3>
+                <p>CSS Grid membantu untuk menyusun kartu berita agar rapi dan terstruktur.</p>
+                <a href="#beranda" class="tombol">Baca Selengkapnya</a>
+            </article>
+            <!--Berita 4-->
+            <article class="kartu-berita">
+                <span class="kategori">Memasak</span>
+                <h3>Tata cara memasak nasi</h3>
+                <ul>
+                    <li>Siapkan beras dan cuci hingga bersih.</li>
+                    <li>Tambahkan air secukupnya dan diamkan selama 30 menit.</li>
+                    <li>Didihkan air dan masukkan beras.</li>
+                </ul>
+                <a href="#beranda" class="tombol">Baca Selengkapnya</a>
+            </article>
+        </div>
     </section>
 </main>
 <footer>

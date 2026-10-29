@@ -1,0 +1,164 @@
+:root {
+    --warna-utama: #1d4ed8;
+    --warna-gelap: #172554;
+    --warna-latar: #2d8ef6;
+    --warna-kartu: white;
+    --warna-teks: #1e293b;
+    --jarak: 20px;
+    --radius: 14px;
+}
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: var(--warna-latar);
+    color: var(--warna-teks);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: var(--warna-utama);
+}
+
+header, footer {
+    background: var(--warna-gelap);
+    color: white;
+    padding: 20px;
+}
+
+.header-inner {
+    max-width: 900px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+}
+
+header h1 {
+    margin: 20px 0;
+    font-size: 24px;
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: white;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #60a5fa;
+}
+
+main {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.pembuka, .kartu-berita {
+    background: var(--warna-kartu);
+    padding: 20px;
+    border-radius: var(--radius);
+}
+
+.pembuka {
+    margin-bottom: 30px;
+}
+
+.pembuka h2 {
+    color: var(--warna-utama);
+    margin-top: 0;
+}
+
+.judul-bagian {
+    margin-bottom: 20px;
+}
+
+.grid-berita {
+    display: grid;
+    grid-template-columns: repeat (3, 1fr);
+    gap: var(--jarak);
+}
+
+.kartu-berita {
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+.kartu-berita:hover {
+    transform: translateY(-10px);
+}
+
+.kategori {
+    color: var(--warna-utama);
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.kartu-berita h3 {
+    margin: 10px 0;
+}
+
+.tombol {
+    display: inline-block;
+    background: var(--warna-utama);
+    color: white;
+    padding: 9px 15px;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+.tombol:hover {
+    background: var(--warna-gelap);
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 0;
+}
+
+@media (max-width: 900px) {
+    .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header h1 {
+        font-size: 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    main {
+        margin: 20px auto;
+        padding: 0 14px;
+    }
+
+    .grid-berita {
+        grid-template-columns: 1fr;
+    }
+}
